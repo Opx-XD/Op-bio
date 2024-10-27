@@ -52,66 +52,28 @@
             margin-top: 20px;
         }
 
-        .photo-container {
-            position: relative; /* For positioning the background circle */
+        .profile-pic {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 5px solid purple; /* Purple border */
+            background-color: #696969;
+            object-fit: cover;
             margin-top: 20px;
-        }
-
-        .glow-background {
-            position: absolute;
-            top: -10px; /* Adjust to position behind the image */
-            left: -10px; /* Adjust to position behind the image */
-            width: 140px; /* Width of the glowing circle */
-            height: 140px; /* Height of the glowing circle */
-            border-radius: 50%; /* Circular background */
-            background-image: conic-gradient(
-                #ff5733,
-                #ff33a6,
-                #3357ff,
-                #33ff57,
-                #ff5733
-            );
-            box-shadow: 0 0 20px rgba(255, 0, 255, 0.5), 
-                        0 0 40px rgba(0, 255, 255, 0.5); /* Glowing effect */
-            animation: pulse 2s infinite; /* Pulse animation */
-            z-index: 0; /* Behind the image */
-        }
-
-        .profile-photo {
-            width: 120px; /* Size of the photo */
-            height: 120px; /* Size of the photo */
-            border-radius: 50%; /* Circular photo */
-            object-fit: cover; /* Ensure the image covers the area */
-            background-color: #696969; /* Fallback color */
-            z-index: 1; /* Above the glowing background */
-        }
-
-        @keyframes pulse {
-            0% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.1);
-            }
-            100% {
-                transform: scale(1);
-            }
+            box-shadow: 0 0 8px purple; /* Add a purple shadow */
         }
     </style>
 </head>
 <body>
     <div class="bio-container">
-        <div class="photo-container">
-            <div class="glow-background"></div>
-            <img src="https://envs.sh/A9V.jpg" alt="Profile Picture" class="profile-photo">
-        </div>
+        <img src="https://envs.sh/A9V.jpg" alt="Profile Picture" class="profile-pic">
         
         <div class="header">𝗔ᴀ𝘀ʜᴜ's 𝗕𝗶𝗼</div>
         
         <div style="font-size: 16px; margin-top: 10px;">
             <p class="section-title">Personal Information</p>
             <p><b>NAME:</b> Aashu</p>
-            <p><b>AGE:</b> 20 <span>(Fake hain 🫢)</span></p>
+            <p><b>AGE:</b> 20 <spoiler>(Fake hain 🫢)</spoiler></p>
             <p><b>BIRTHDAY:</b> 4 January</p>
             <p><b>PLACE:</b> Bihar</p>
             <p><b>CONTACT ME:</b> <a href="https://t.me/gx_143" style="color: #f0f0f0;">@GX_143</a></p>
