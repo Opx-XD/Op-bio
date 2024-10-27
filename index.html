@@ -51,18 +51,64 @@
             color: #aaa;
             margin-top: 20px;
         }
+
+        .photo-container {
+            position: relative; /* For positioning the border around the photo */
+            margin-top: 20px;
+        }
+
+        .glow-border {
+            position: absolute;
+            top: -5px; /* Adjust to position around the image */
+            left: -5px; /* Adjust to position around the image */
+            width: 130px; /* Width of the border */
+            height: 130px; /* Height of the border */
+            border-radius: 50%; /* Circular border */
+            background-image: conic-gradient(
+                #ff5733, 
+                #ff33a6, 
+                #3357ff, 
+                #33ff57, 
+                #ff5733
+            );
+            box-shadow: 0 0 20px rgba(255, 0, 255, 0.5), 
+                        0 0 40px rgba(0, 255, 255, 0.5); /* Glowing effect */
+            animation: rotate 5s linear infinite; /* Rotate animation */
+            z-index: 0; /* Behind the image */
+        }
+
+        .profile-photo {
+            width: 120px; /* Size of the photo */
+            height: 120px; /* Size of the photo */
+            border-radius: 50%; /* Circular photo */
+            object-fit: cover; /* Ensure the image covers the area */
+            background-color: #696969; /* Fallback color */
+            z-index: 1; /* Above the border */
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
     </style>
 </head>
 <body>
     <div class="bio-container">
-        <img src="https://envs.sh/A9V.jpg" alt="Profile Picture" style="width: 120px; height: 120px; border-radius: 50%; border: 5px solid #696969; background-color: #696969; object-fit: cover; margin-top: 20px;">
+        <div class="photo-container">
+            <div class="glow-border"></div>
+            <img src="https://envs.sh/A9V.jpg" alt="Profile Picture" class="profile-photo">
+        </div>
         
         <div class="header">𝗔ᴀ𝘀ʜᴜ's 𝗕𝗶𝗼</div>
         
         <div style="font-size: 16px; margin-top: 10px;">
             <p class="section-title">Personal Information</p>
             <p><b>NAME:</b> Aashu</p>
-            <p><b>AGE:</b> 20 <spoiler>(Fake hain 🫢)</spoiler></p>
+            <p><b>AGE:</b> 20 <span>(Fake hain 🫢)</span></p>
             <p><b>BIRTHDAY:</b> 4 January</p>
             <p><b>PLACE:</b> Bihar</p>
             <p><b>CONTACT ME:</b> <a href="https://t.me/gx_143" style="color: #f0f0f0;">@GX_143</a></p>
