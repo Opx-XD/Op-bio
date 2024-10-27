@@ -12,19 +12,20 @@
             background: linear-gradient(to bottom, #4b0082, #000000); /* Purple to black gradient */
             color: white;
             display: flex;
-            justify-content: center;
+            flex-direction: column; /* Align content vertically */
             align-items: center;
             height: 100vh;
-            flex-direction: column; /* Align content vertically */
         }
 
         .bio-container {
-            max-width: 450px; /* Increased width for the info box */
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.7);
+            max-width: 600px; /* Increased width for the info box */
+            padding: 40px; /* Increased padding for more space */
+            background-color: rgba(0, 0, 0, 0.8); /* Darker background for contrast */
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
             text-align: center;
+            margin-top: auto; /* Push box to the bottom */
+            margin-bottom: 30px; /* Space from the bottom */
             animation: fadeIn 1s ease-in-out;
         }
 
@@ -48,7 +49,6 @@
             display: flex;
             align-items: center; /* Align icon with text */
             justify-content: center; /* Center the copyright text */
-            margin-top: auto; /* Push footer to the bottom */
             padding: 10px 0; /* Add padding for spacing */
         }
 
