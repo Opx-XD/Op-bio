@@ -53,27 +53,27 @@
         }
 
         .photo-container {
-            position: relative; /* For positioning the border around the photo */
+            position: relative; /* For positioning the background circle */
             margin-top: 20px;
         }
 
-        .glow-border {
+        .glow-background {
             position: absolute;
-            top: -5px; /* Adjust to position around the image */
-            left: -5px; /* Adjust to position around the image */
-            width: 130px; /* Width of the border */
-            height: 130px; /* Height of the border */
-            border-radius: 50%; /* Circular border */
+            top: -10px; /* Adjust to position behind the image */
+            left: -10px; /* Adjust to position behind the image */
+            width: 140px; /* Width of the glowing circle */
+            height: 140px; /* Height of the glowing circle */
+            border-radius: 50%; /* Circular background */
             background-image: conic-gradient(
-                #ff5733, 
-                #ff33a6, 
-                #3357ff, 
-                #33ff57, 
+                #ff5733,
+                #ff33a6,
+                #3357ff,
+                #33ff57,
                 #ff5733
             );
             box-shadow: 0 0 20px rgba(255, 0, 255, 0.5), 
                         0 0 40px rgba(0, 255, 255, 0.5); /* Glowing effect */
-            animation: rotate 5s linear infinite; /* Rotate animation */
+            animation: pulse 2s infinite; /* Pulse animation */
             z-index: 0; /* Behind the image */
         }
 
@@ -83,15 +83,18 @@
             border-radius: 50%; /* Circular photo */
             object-fit: cover; /* Ensure the image covers the area */
             background-color: #696969; /* Fallback color */
-            z-index: 1; /* Above the border */
+            z-index: 1; /* Above the glowing background */
         }
 
-        @keyframes rotate {
+        @keyframes pulse {
             0% {
-                transform: rotate(0deg);
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
             }
             100% {
-                transform: rotate(360deg);
+                transform: scale(1);
             }
         }
     </style>
@@ -99,7 +102,7 @@
 <body>
     <div class="bio-container">
         <div class="photo-container">
-            <div class="glow-border"></div>
+            <div class="glow-background"></div>
             <img src="https://envs.sh/A9V.jpg" alt="Profile Picture" class="profile-photo">
         </div>
         
