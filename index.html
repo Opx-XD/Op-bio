@@ -15,10 +15,11 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
+            flex-direction: column; /* Align content vertically */
         }
 
         .bio-container {
-            max-width: 400px;
+            max-width: 450px; /* Increased width for the info box */
             padding: 20px;
             background-color: rgba(0, 0, 0, 0.7);
             border-radius: 10px;
@@ -43,9 +44,18 @@
         }
 
         .footer {
-            font-size: 14px;
-            color: #aaa;
-            margin-top: 20px;
+            font-size: 16px;
+            display: flex;
+            align-items: center; /* Align icon with text */
+            justify-content: center; /* Center the copyright text */
+            margin-top: auto; /* Push footer to the bottom */
+            padding: 10px 0; /* Add padding for spacing */
+        }
+
+        .github-icon {
+            margin-left: 5px; /* Space between text and icon */
+            font-size: 20px; /* Size of the GitHub icon */
+            color: #333; /* Color of the icon */
         }
 
         .profile-pic {
@@ -57,20 +67,6 @@
             object-fit: cover;
             margin-top: 20px;
             box-shadow: 0 0 8px purple; /* Add a purple shadow */
-        }
-
-        .copyright {
-            font-size: 16px;
-            display: flex;
-            align-items: center; /* Align icon with text */
-            justify-content: center; /* Center the copyright text */
-            margin-top: 20px; /* Space above the copyright section */
-        }
-
-        .github-icon {
-            margin-left: 5px; /* Space between text and icon */
-            font-size: 20px; /* Size of the GitHub icon */
-            color: #333; /* Color of the icon */
         }
     </style>
 </head>
@@ -88,11 +84,12 @@
             <p><b>PLACE:</b> Bihar</p>
             <p><b>CONTACT ME:</b> <a href="https://t.me/gx_143" style="color: #f0f0f0;">@GX_143</a></p>
         </div>
-
-        <footer class="copyright">
-            <p>&copy; 2024 Sonal's Bio.</p>
-            <i class="fab fa-github github-icon"></i> <!-- GitHub icon -->
-        </footer>
     </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Aashu's Bio.</p>
+        <i class="fab fa-github github-icon"></i> <!-- GitHub icon -->
+        <span>All rights reserved</span>
+    </footer>
 </body>
 </html>
