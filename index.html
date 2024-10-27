@@ -4,12 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aashu's Bio</title>
+    <style>
+        /* Shimmer Effect */
+        @keyframes shimmer {
+            0% { color: #fff; }
+            50% { color: #00ffcc; text-shadow: 0 0 15px #00ffcc, 0 0 25px #00ffcc; }
+            100% { color: #fff; }
+        }
+        /* Applying Shimmer */
+        .shimmer-text {
+            animation: shimmer 1.5s infinite alternate;
+        }
+    </style>
 </head>
 <body style="display: flex; justify-content: center; align-items: center; background-color: #f0f0f0; height: 100vh; margin: 0; font-family: Arial, sans-serif;">
     <div style="max-width: 400px; padding: 15px; background-color: rgba(0, 0, 0, 0.7); border-radius: 10px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); text-align: center; animation: fadeIn 1s ease-in-out; color: white; padding-bottom: 20px;">
         <img src="https://envs.sh/A9V.jpg" alt="Profile Picture" style="width: 120px; height: 120px; border-radius: 50%; border: 5px solid #696969; background-color: #696969; object-fit: cover; margin-top: 20px;">
         
-        <div style="font-size: 24px; font-weight: bold; color: #ffffff; margin: 20px 0; text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);">𝗔ᴀ𝘀ʜᴜ's 𝗕𝗶𝗼</div>
+        <div class="shimmer-text" style="font-size: 24px; font-weight: bold; color: #ffffff; margin: 20px 0; text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);">𝗔ᴀ𝘀ʜᴜ's 𝗕𝗶𝗼</div>
         
         <div style="font-size: 16px; margin-top: 10px; background-color: black; padding: 10px; border-radius: 8px;">
             <p style="color: #ff6347; font-weight: bold; font-size: 18px; transition: color 0.3s ease;" onmouseover="this.style.color='#adff2f'" onmouseout="this.style.color='#ff6347'">Personal Information</p>
