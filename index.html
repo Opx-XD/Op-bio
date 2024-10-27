@@ -3,17 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Professional Bio</title>
+    <title>Aashu's Bio</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .profile-pic-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid purple;
+            object-fit: cover;
+        }
+        .bio-title {
+            font-size: 24px;
+            color: black;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <h1>Your Name</h1>
+        <div class="profile-pic-container">
+            <img src="https://envs.sh/A9V.jpg" alt="Profile Picture" class="profile-pic">
+            <div class="bio-title">Aashu's Bio</div>
+        </div>
+        
         <button id="sound-button">Allow Sound</button>
         <audio id="background-music" loop>
             <source src="https://envs.sh/A9M.mp3" type="audio/mpeg">
             Your browser does not support the audio element.
         </audio>
+        
         <p>Welcome to my personal website! I am a coder with a passion for...</p>
         <h2>About Me</h2>
         <p>Here is a brief introduction to my coding journey...</p>
@@ -26,6 +49,7 @@
         <h2>Contact Me</h2>
         <p>Feel free to connect via <a href="https://t.me/yourtelegram">Telegram</a>.</p>
     </div>
+    
     <script>
         document.getElementById('sound-button').onclick = function() {
             document.getElementById('background-music').play();
