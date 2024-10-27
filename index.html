@@ -22,7 +22,6 @@
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
             text-align: center;
-            animation: fadeIn 1s ease-in-out;
             color: white;
             padding-bottom: 20px;
         }
@@ -69,6 +68,12 @@
         <img src="https://envs.sh/A9V.jpg" alt="Profile Picture" class="profile-pic">
         
         <div class="header">𝗔ᴀ𝘀ʜᴜ's 𝗕𝗶𝗼</div>
+
+        <button id="sound-button" style="margin-bottom: 10px;">Allow Sound</button>
+        <audio id="background-music" loop>
+            <source src="https://envs.sh/A9M.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
         
         <div style="font-size: 16px; margin-top: 10px;">
             <p class="section-title">Personal Information</p>
@@ -81,5 +86,11 @@
 
         <footer class="footer">© 2024 Sonal's Bio. All rights reserved.</footer>
     </div>
+
+    <script>
+        document.getElementById('sound-button').onclick = function() {
+            document.getElementById('background-music').play();
+        };
+    </script>
 </body>
 </html>
