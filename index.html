@@ -4,23 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aashu's Bio</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .bio-container {
+            max-width: 400px;
+            padding: 15px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+            color: white;
+            padding-bottom: 20px;
+        }
+
+        img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 5px solid #696969;
+            background-color: #696969;
+            object-fit: cover;
+            margin-top: 20px;
+        }
+
+        .header {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ffffff;
+            margin: 20px 0;
+            text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+        }
+
+        .section-title {
+            color: #ff6347;
+            font-weight: bold;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        .section-title:hover {
+            color: #adff2f;
+        }
+
+        .footer {
+            font-size: 14px;
+            color: #aaa;
+            margin-top: 20px;
+        }
+    </style>
 </head>
-<body style="display: flex; justify-content: center; align-items: center; background-color: #f0f0f0; height: 100vh; margin: 0; font-family: Arial, sans-serif;">
-    <div style="max-width: 400px; padding: 15px; background-color: rgba(0, 0, 0, 0.7); border-radius: 10px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); text-align: center; animation: fadeIn 1s ease-in-out; color: white; padding-bottom: 20px;">
-        <img src="https://envs.sh/A9V.jpg" alt="Profile Picture" style="width: 120px; height: 120px; border-radius: 50%; border: 5px solid #696969; background-color: #696969; object-fit: cover; margin-top: 20px;">
+<body>
+    <div class="bio-container">
+        <img src="https://envs.sh/A9V.jpg" alt="Profile Picture">
         
-        <div style="font-size: 24px; font-weight: bold; color: #ffffff; margin: 20px 0; text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);">𝗔ᴀ𝘀ʜᴜ's 𝗕𝗶𝗼</div>
+        <div class="header">𝗔ᴀ𝘀ʜᴜ's 𝗕𝗶𝗼</div>
         
-        <div style="font-size: 16px; margin-top: 10px; background-color: black; padding: 10px; border-radius: 8px;">
-            <p style="color: #ff6347; font-weight: bold; font-size: 18px; transition: color 0.3s ease;" onmouseover="this.style.color='#adff2f'" onmouseout="this.style.color='#ff6347'">Personal Information</p>
+        <div style="font-size: 16px; margin-top: 10px;">
+            <p class="section-title">Personal Information</p>
             <p><b>NAME:</b> Aashu</p>
             <p><b>AGE:</b> 20 <spoiler>(Fake hain 🫢)</spoiler></p>
             <p><b>BIRTHDAY:</b> 4 January</p>
             <p><b>PLACE:</b> Bihar</p>
-            <p><b>CONTACT ME:</b> @GX_143</p>
-            
-            <footer style="font-size: 14px; color: #aaa; margin-top: 20px;">© 2024 Sonal's Bio. All rights reserved.</footer>
+            <p><b>CONTACT ME:</b> <a href="https://t.me/gx_143" style="color: #f0f0f0;">@GX_143</a></p>
         </div>
+
+        <footer class="footer">© 2024 Sonal's Bio. All rights reserved.</footer>
     </div>
 </body>
 </html>
