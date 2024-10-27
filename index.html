@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aashu's Bio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         body {
             margin: 0;
@@ -57,6 +58,20 @@
             margin-top: 20px;
             box-shadow: 0 0 8px purple; /* Add a purple shadow */
         }
+
+        .copyright {
+            font-size: 16px;
+            display: flex;
+            align-items: center; /* Align icon with text */
+            justify-content: center; /* Center the copyright text */
+            margin-top: 20px; /* Space above the copyright section */
+        }
+
+        .github-icon {
+            margin-left: 5px; /* Space between text and icon */
+            font-size: 20px; /* Size of the GitHub icon */
+            color: #333; /* Color of the icon */
+        }
     </style>
 </head>
 <body>
@@ -74,7 +89,10 @@
             <p><b>CONTACT ME:</b> <a href="https://t.me/gx_143" style="color: #f0f0f0;">@GX_143</a></p>
         </div>
 
-        <footer class="footer">© 2024 Sonal's Bio. All rights reserved. <span style="font-size: 18px;">&#128187;</span></footer>
+        <footer class="copyright">
+            <p>&copy; 2024 Sonal's Bio.</p>
+            <i class="fab fa-github github-icon"></i> <!-- GitHub icon -->
+        </footer>
     </div>
 </body>
 </html>
